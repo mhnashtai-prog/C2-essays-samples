@@ -1,4 +1,4 @@
-´<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 1.5rem 1rem;
+      padding: 0.75rem;
       color: #fff;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -42,16 +42,16 @@
     
     header {
       text-align: center;
-      margin-bottom: 1rem;
-      padding: 1rem 0 0.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 0 0.25rem;
     }
     
     header h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.25rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: #C9A961;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
       letter-spacing: -0.04em;
       text-transform: uppercase;
       background: linear-gradient(135deg, #C9A961 0%, rgba(201, 169, 97, 0.8) 100%);
@@ -61,16 +61,16 @@
     }
     
     .subtitle {
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
       color: #8e8e93;
-      margin-bottom: 0.375rem;
+      margin-bottom: 0.25rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
     
     .author {
-      font-size: 0.6875rem;
+      font-size: 0.625rem;
       color: #636366;
       font-weight: 400;
       letter-spacing: 0.02em;
@@ -78,15 +78,15 @@
     
     .card-container {
       perspective: 1500px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       background: rgba(28, 28, 30, 0.85);
       backdrop-filter: blur(40px) saturate(150%);
       -webkit-backdrop-filter: blur(40px) saturate(150%);
       border: 1.5px solid rgba(201, 169, 97, 0.25);
       border-radius: 1.5rem;
-      padding: 2rem;
+      padding: 1.5rem;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-      height: calc(100vh - 240px);
+      height: calc(100vh - 180px);
       overflow: hidden;
     }
     
@@ -223,7 +223,7 @@
     .controls {
       display: flex;
       flex-direction: row;
-      gap: 2rem;
+      gap: 1.5rem;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
@@ -295,13 +295,13 @@
     }
     
     .reset-btn {
-      padding: 1rem 2.5rem;
+      padding: 0.75rem 2rem;
       background: linear-gradient(135deg, #C9A961 0%, rgba(201, 169, 97, 0.85) 100%);
       color: white;
       border: none;
       border-radius: 0.75rem;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: 0 4px 16px rgba(201, 169, 97, 0.3);
@@ -327,18 +327,62 @@
       text-align: center;
     }
     
+    .grammar-sentence {
+      background: rgba(201, 169, 97, 0.1);
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #e5e5e7;
+    }
+    
+    .grammar-highlight {
+      color: #4A90E2;
+      font-weight: 600;
+    }
+    
+    .collocation-box {
+      background: rgba(74, 144, 226, 0.1);
+      border: 1px solid rgba(74, 144, 226, 0.3);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+    
+    .collocation-box h3 {
+      color: #4A90E2;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    
+    .collocation-box p {
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: #d1d1d6;
+      margin-bottom: 0.6rem;
+    }
+    
     @media (max-width: 768px) {
       body {
-        padding: 1rem;
+        padding: 0.5rem;
       }
       
       header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       
-      .card-face {
-        min-height: 450px;
-        padding: 2rem 1.5rem;
+      .subtitle {
+        font-size: 0.7rem;
+      }
+      
+      .author {
+        font-size: 0.6rem;
+      }
+      
+      .card-container {
+        padding: 1rem;
       }
       
       .essay-answer {
@@ -347,10 +391,6 @@
       
       .text-content {
         font-size: 0.8rem;
-      }
-      
-      .arrows {
-        gap: 2rem;
       }
       
       .arrow {
@@ -366,6 +406,11 @@
         width: 10px;
         height: 10px;
       }
+      
+      .grammar-sentence {
+        font-size: 0.85rem;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -374,9 +419,9 @@
   
   <div class="container">
     <header>
-      <h1>C2 CAMBRIDGE</h1>
-      <p class="subtitle">Essay Practice · Part 1 Preparation</p>
-      <p class="author">Advanced Writing Practice by Majid Nashtai</p>
+      <h1>INTUITY</h1>
+      <p class="subtitle">Immersive & Interactive Learning</p>
+      <p class="author">Majid Nashtai · C2 Cambridge Essays</p>
     </header>
     
     <div class="card-container">
@@ -387,26 +432,26 @@
           
           <div class="task-box" id="taskBox"></div>
           
-          <div class="text-section">
+          <div class="text-section" id="textSection1">
             <div class="text-title" id="text1Title"></div>
             <div class="text-content" id="text1Content"></div>
           </div>
           
-          <div class="text-section">
+          <div class="text-section" id="textSection2">
             <div class="text-title" id="text2Title"></div>
             <div class="text-content" id="text2Content"></div>
           </div>
           
-          <div class="card-hint">💡 Click card to see sample answer with key phrases</div>
+          <div class="card-hint">💡 Click card to see answer</div>
         </div>
         
         <div class="card-face card-back">
-          <div class="card-label">SAMPLE ANSWER · 240-280 WORDS</div>
+          <div class="card-label" id="backLabel">SAMPLE ANSWER</div>
           <div class="topic-badge" id="topicBadgeBack"></div>
           
           <div class="essay-answer" id="essayAnswer"></div>
           
-          <div class="card-hint">💡 Click to see question again · Key phrases are highlighted</div>
+          <div class="card-hint">💡 Click to see question again</div>
         </div>
       </div>
     </div>
@@ -416,7 +461,7 @@
       <div class="nav-dots" id="navDots"></div>
       <div class="arrow" onclick="nextCard(); event.stopPropagation();">→</div>
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 1rem;">
+    <div style="display: flex; justify-content: center; margin-top: 0.75rem;">
       <button class="reset-btn" onclick="resetProgress()">↻ Reset Progress</button>
     </div>
   </div>
@@ -432,13 +477,13 @@
         text2Content: "Once upon a time outdoor advertising was straightforward. Posters were stuck up on anything from a bus shelter to a motorway hoarding. Many people considered this kind of advertising to be fairly dull, a harmless blot on the landscape and chose to ignore it. These people now regard digital advertising as a form of unwanted, creeping commercialization: it attracts a buzz simply because it is new. They feel that any advertising which targets children or vulnerable adults is a dubious practice at the best of times, and digital advertising is, moreover, wasteful, damaging to the environment and completely unnecessary.",
         answer: `<p>The two contrasting texts <strong>address the contentious issue</strong> of outdoor advertising, particularly in its digital form. While the first passage celebrates technological innovation, the second raises <strong>legitimate ethical concerns</strong> about its societal impact.</p>
 
-<p>The first author <strong>emphasizes the transformative potential</strong> of digital advertising, arguing that modern screen-based media offer <strong>unprecedented creative opportunities</strong>. <strong>Proponents claim that</strong> such advertisements can enliven urban environments while effectively engaging consumers. However, this perspective <strong>appears somewhat naïve</strong>, <strong>failing to acknowledge</strong> the manipulative nature inherent in all advertising.</p>
+<p>The first author <strong>emphasizes the transformative potential</strong> of digital advertising, arguing that modern screen-based media offer <strong>unprecedented creative opportunities</strong>. <strong>Proponents claim that</strong> such advertisements can enliven urban environments while effectively engaging consumers. However, this perspective <strong>appears somewhat naïve</strong>, <strong>failing to acknowledge</strong> the manipulative nature inherent in all advertising, <strong>thereby obscuring</strong> its fundamentally commercial purpose.</p>
 
-<p>Conversely, the second text <strong>adopts a more critical stance</strong>, viewing digital advertising as <strong>symptomatic of creeping commercialization</strong>. <strong>Critics argue that</strong> the technology's novelty masks its <strong>fundamentally exploitative purpose</strong>, particularly when targeting vulnerable demographics. Moreover, <strong>environmental concerns cannot be dismissed lightly</strong>, as digital screens consume considerable energy resources.</p>
+<p>Conversely, the second text <strong>adopts a more critical stance</strong>, viewing digital advertising as <strong>symptomatic of creeping commercialization</strong>. <strong>Critics argue that</strong> the technology's novelty masks its <strong>fundamentally exploitative purpose</strong>, particularly when targeting vulnerable demographics. Moreover, <strong>environmental concerns cannot be dismissed lightly</strong>, as digital screens consume considerable energy resources, <strong>producing carbon emissions</strong> that exacerbate climate change.</p>
 
-<p><strong>From my perspective</strong>, while advertising serves a legitimate commercial function, <strong>unchecked digital expansion threatens</strong> to transform public spaces into aggressive commercial zones. <strong>What remains deeply troubling</strong> is the psychological manipulation of children and vulnerable adults, which <strong>constitutes a dubious ethical practice</strong> regardless of technological advancement.</p>
+<p><strong>From my perspective</strong>, <strong>unchecked digital expansion threatens</strong> to transform public spaces into aggressive commercial zones, <strong>alienating citizens from</strong> environments once considered communal. <strong>What remains deeply troubling</strong> is the psychological manipulation of children and vulnerable adults, which <strong>constitutes a dubious ethical practice</strong>, <strong>challenging our very definition of</strong> responsible marketing.</p>
 
-<p><strong>In conclusion</strong>, although digital advertising offers creative possibilities, society must <strong>implement stringent regulations</strong> to prevent environmental damage and protect vulnerable groups from <strong>relentless commercial bombardment</strong>.</p>`
+<p><strong>In conclusion</strong>, <strong>driven by profit motives and seeking competitive advantage</strong>, advertisers increasingly disregard social responsibility, <strong>necessitating stringent regulations</strong> to protect vulnerable groups from <strong>relentless commercial bombardment</strong>.</p>`
       },
       {
         topic: "Traffic Congestion",
@@ -449,13 +494,13 @@
         text2Content: "Recent research into the attitudes of motorists shows we are still more than happy to get behind the wheel. Despite rising fuel costs, insurance premiums and frequent traffic jams, 9 out of 10 of us still enjoy driving. Whether it's visiting friends and relations, taking the family for a day out or even commuting to work, the car remains the first choice for many people. Experts argue that, unlike public transport, the car leaves us in charge of our own destiny, giving us the freedom to travel when and where we want. The car also gives us the opportunity to express ourselves. The kind of vehicle we drive tells the world something about who we are or what we aspire to be. Cars are not simply a means of transport but also something we wear.",
         answer: `<p>These two passages <strong>present contrasting perspectives on</strong> automobile usage in modern society. While the first advocates for restrictive policies, the second <strong>highlights the enduring appeal</strong> of personal vehicle ownership.</p>
 
-<p>The first author <strong>outlines various policy interventions</strong> designed to combat congestion, ranging from financial disincentives such as congestion charges to <strong>infrastructure improvements promoting alternative transport</strong>. <strong>Implicit in this argument is the assumption that</strong> motorists can be persuaded to abandon their vehicles through rational incentives. However, this view <strong>underestimates the psychological attachment</strong> people have to their cars.</p>
+<p>The first author <strong>outlines various policy interventions</strong> designed to combat congestion, ranging from financial disincentives such as congestion charges to <strong>infrastructure improvements promoting alternative transport</strong>. <strong>Implicit in this argument is the assumption that</strong> motorists can be persuaded to abandon their vehicles through rational incentives. However, this view <strong>underestimates the psychological attachment</strong> people have to their cars, <strong>thereby overlooking</strong> the emotional dimensions of vehicle ownership.</p>
 
-<p>The second text <strong>challenges this premise</strong>, demonstrating that despite escalating costs and inconvenience, <strong>the overwhelming majority</strong> of motorists remain committed to driving. <strong>What emerges as particularly significant</strong> is the emotional dimension: vehicles represent not merely transportation but personal freedom and <strong>self-expression</strong>. This <strong>profoundly complicates</strong> policy-makers' attempts to reduce car dependency.</p>
+<p>The second text <strong>challenges this premise</strong>, demonstrating that despite escalating costs and inconvenience, <strong>the overwhelming majority</strong> of motorists remain committed to driving. <strong>What emerges as particularly significant</strong> is the emotional dimension: vehicles represent not merely transportation but personal freedom and <strong>self-expression</strong>. <strong>Deeply ingrained in modern culture</strong>, this attachment <strong>profoundly complicates</strong> policy-makers' attempts to reduce car dependency, <strong>forcing governments to reconsider</strong> purely punitive approaches.</p>
 
-<p><strong>In my view</strong>, both perspectives contain valid elements. While environmental imperatives <strong>necessitate reducing vehicle emissions</strong>, <strong>heavy-handed policies risk alienating</strong> citizens who view driving as fundamental to their lifestyle. <strong>A more nuanced approach</strong> would involve investing substantially in public transport quality while <strong>implementing gradual incentives</strong> rather than punitive measures.</p>
+<p><strong>In my view</strong>, both perspectives contain valid elements. While environmental imperatives <strong>necessitate reducing vehicle emissions</strong>, <strong>heavy-handed policies risk alienating</strong> citizens who view driving as fundamental to their lifestyle, <strong>producing resentment</strong> that undermines policy effectiveness. <strong>A more nuanced approach</strong> would involve investing substantially in public transport quality while <strong>implementing gradual incentives</strong> rather than punitive measures, <strong>thereby encouraging</strong> voluntary behavioral change.</p>
 
-<p><strong>Ultimately</strong>, <strong>achieving sustainable urban mobility requires</strong> addressing both practical infrastructure needs and the psychological dimensions of car ownership.</p>`
+<p><strong>Ultimately</strong>, <strong>shaped by decades of car-centric urban planning</strong>, our transportation culture requires transformation, <strong>demanding both practical infrastructure investment and</strong> sensitivity to the psychological dimensions of mobility.</p>`
       },
       {
         topic: "Teenagers as Consumers",
@@ -466,13 +511,13 @@
         text2Content: "Advertising responds to young people's delight in what is new by developing sophisticated and innovative, often humorous advertisements which can be seen on television and cinema screens and on billboards around our towns and cities. The tastes of this generation of young people have had an impact on advertisers worldwide. However, it is the energy of the young, above all, that has influenced the world of marketing and has kept it on its toes, pushing the creative boundaries to become almost an art form. That is the power of young people.",
         answer: `<p>These contrasting passages <strong>examine the relationship between</strong> adolescent consumers and the advertising industry, <strong>offering divergent interpretations of</strong> who wields greater influence in this dynamic.</p>
 
-<p>The first text <strong>portrays teenagers as vulnerable targets</strong> of manipulative marketing strategies. <strong>According to this perspective</strong>, advertisers cynically exploit young people's <strong>psychological need for peer acceptance</strong>, treating them as <strong>malleable subjects</strong> whose desires can be artificially manufactured. This view <strong>raises legitimate concerns about</strong> the ethics of targeting psychologically immature individuals with sophisticated persuasion techniques.</p>
+<p>The first text <strong>portrays teenagers as vulnerable targets</strong> of manipulative marketing strategies. <strong>According to this perspective</strong>, <strong>having identified teenagers as particularly susceptible</strong>, advertisers cynically exploit young people's <strong>psychological need for peer acceptance</strong>, treating them as <strong>malleable subjects</strong> whose desires can be artificially manufactured. This view <strong>raises legitimate concerns about</strong> the ethics of targeting psychologically immature individuals with sophisticated persuasion techniques, <strong>potentially causing</strong> lasting damage to their self-perception and financial habits.</p>
 
-<p>Conversely, the second passage <strong>presents a more empowering narrative</strong>, arguing that adolescents actively shape advertising rather than passively receiving it. <strong>Proponents of this view emphasize</strong> how youthful energy and innovation <strong>compel marketers to evolve</strong>, essentially elevating commercial messaging to an art form. This perspective <strong>attributes considerable agency</strong> to young consumers.</p>
+<p>Conversely, the second passage <strong>presents a more empowering narrative</strong>, arguing that adolescents actively shape advertising rather than passively receiving it. <strong>Proponents of this view emphasize</strong> how youthful energy and innovation <strong>compel marketers to evolve</strong>, essentially elevating commercial messaging to an art form. <strong>Driven by curiosity and seeking authenticity</strong>, young consumers reject outdated marketing approaches, <strong>transforming entire advertising landscapes</strong>.</p>
 
-<p><strong>From my standpoint</strong>, the reality likely <strong>encompasses elements of both viewpoints</strong>. While teenagers certainly <strong>exert influence through</strong> their spending power and cultural trends, <strong>it would be disingenuous to ignore</strong> the sophisticated psychological techniques employed by modern advertisers. <strong>What remains particularly concerning</strong> is the constant digital exposure, which <strong>leaves young people especially vulnerable</strong> to subliminal messaging.</p>
+<p><strong>From my standpoint</strong>, the reality likely <strong>encompasses elements of both viewpoints</strong>. While teenagers certainly <strong>exert influence through</strong> their spending power and cultural trends, <strong>it would be disingenuous to ignore</strong> the sophisticated psychological techniques employed by modern advertisers. <strong>What remains particularly concerning</strong> is the constant digital exposure, which <strong>leaves young people especially vulnerable</strong> to subliminal messaging, <strong>blurring the boundaries between</strong> genuine self-expression and manufactured desire.</p>
 
-<p><strong>In conclusion</strong>, while acknowledging adolescent agency, society must <strong>implement robust protections</strong> against exploitative advertising practices.</p>`
+<p><strong>In conclusion</strong>, <strong>frequently perceived as empowered consumers yet simultaneously exploited</strong>, teenagers require robust protections, <strong>ensuring</strong> their developmental years aren't dominated by commercial manipulation.</p>`
       },
       {
         topic: "Music in Education",
@@ -500,13 +545,13 @@
         text2Content: "The inescapable truth is that the cinema, one of the greatest cultural achievements of the twentieth century, has reached a new low point in recent years. All but a few movies are, frankly, not worth anyone's valuable time. Audiences are increasingly presented with childish comedies, predictable action films and disappointing sequels. There is also the absurd idea that a film with an inflated budget of millions is a substitute for a well-acted, imaginative and original film. Film studios now spend almost as much money on marketing their films as producing them, which tends to suggest their concern is with profit rather than quality.",
         answer: `<p>These passages <strong>present starkly contrasting assessments of</strong> contemporary cinema, with the first celebrating its <strong>transformative potential</strong> while the second <strong>laments its apparent decline</strong>.</p>
 
-<p>The first author <strong>adopts an optimistic perspective</strong>, arguing that cinema serves dual functions: providing escapism while simultaneously <strong>prompting audiences to grapple with</strong> profound moral questions. <strong>Technological innovation</strong>, according to this view, <strong>enhances rather than diminishes</strong> film's capacity to generate <strong>emotionally resonant experiences</strong>. This argument <strong>positions cinema as</strong> both entertainment and <strong>a catalyst for social reflection</strong>.</p>
+<p>The first author <strong>adopts an optimistic perspective</strong>, arguing that cinema serves dual functions: providing escapism while simultaneously <strong>prompting audiences to grapple with</strong> profound moral questions. <strong>Technological innovation</strong>, according to this view, <strong>enhances rather than diminishes</strong> film's capacity to generate <strong>emotionally resonant experiences</strong>, <strong>enabling filmmakers to explore</strong> complex themes with unprecedented sophistication. This argument <strong>positions cinema as</strong> both entertainment and <strong>a catalyst for social reflection</strong>, <strong>challenging viewers to reconsider</strong> their assumptions about war, poverty, and prejudice.</p>
 
-<p>Conversely, the second text <strong>offers a scathing critique</strong>, suggesting that commercial imperatives have <strong>fundamentally corrupted</strong> cinematic art. <strong>Critics point to</strong> the proliferation of formulaic productions and the <strong>disturbing prioritization of</strong> marketing expenditure over creative investment. <strong>Implicit in this argument is</strong> the notion that inflated budgets <strong>serve as poor substitutes for</strong> genuine artistic vision.</p>
+<p>Conversely, the second text <strong>offers a scathing critique</strong>, suggesting that commercial imperatives have <strong>fundamentally corrupted</strong> cinematic art. <strong>Critics point to</strong> the proliferation of formulaic productions and the <strong>disturbing prioritization of</strong> marketing expenditure over creative investment. <strong>Driven by profit motives and seeking immediate returns</strong>, studios produce childish comedies and predictable sequels, <strong>alienating sophisticated audiences</strong> who crave originality. <strong>Implicit in this argument is</strong> the notion that inflated budgets <strong>serve as poor substitutes for</strong> genuine artistic vision.</p>
 
-<p><strong>From my perspective</strong>, both viewpoints <strong>capture aspects of</strong> a complex reality. While mainstream cinema increasingly <strong>tends toward commercialization</strong>, independent filmmakers continue producing thought-provoking work. <strong>What remains troubling</strong> is how economic pressures <strong>incentivize safe, predictable content</strong> rather than innovation. However, <strong>technological democratization</strong> of filmmaking tools <strong>paradoxically enables</strong> more diverse voices to emerge.</p>
+<p><strong>From my perspective</strong>, both viewpoints <strong>capture aspects of</strong> a complex reality. While mainstream cinema increasingly <strong>tends toward commercialization</strong>, <strong>producing content</strong> that prioritizes safe investments over innovation, independent filmmakers continue producing thought-provoking work. <strong>What remains troubling</strong> is how economic pressures <strong>incentivize safe, predictable content</strong> rather than risk-taking. However, <strong>technological democratization</strong> of filmmaking tools <strong>paradoxically enables</strong> more diverse voices to emerge, <strong>reshaping the cinematic landscape</strong> in unexpected ways.</p>
 
-<p><strong>In conclusion</strong>, cinema's future depends on <strong>balancing commercial viability with</strong> artistic integrity.</p>`
+<p><strong>In conclusion</strong>, <strong>frequently dismissed as irredeemably commercial yet simultaneously capable of profound artistry</strong>, modern cinema requires audiences to actively seek quality, <strong>supporting films</strong> that prioritize substance over spectacle.</p>`
       },
       {
         topic: "Food & Dining",
@@ -541,6 +586,408 @@
 <p><strong>From my viewpoint</strong>, both texts <strong>identify significant concerns</strong>. Universities should <strong>strive to maintain</strong> reading's appeal while meeting academic objectives. <strong>Furthermore</strong>, the second text's emphasis on social reading <strong>offers a valuable counterbalance to</strong> increasingly individualistic digital consumption patterns. <strong>Reviving traditions of</strong> shared reading could <strong>combat the isolation</strong> characteristic of modern life.</p>
 
 <p><strong>In conclusion</strong>, preserving reading's pleasure <strong>requires both institutional reform and</strong> renewed commitment to communal practices.</p>`
+      },
+      {
+        type: "grammar",
+        topic: "Causal Participle Phrases",
+        task: "Study these 5 complete sentences using causal participle phrases. Click to see common UK-style collocations.",
+        text1Title: "Formula: Having been + past participle, [main clause], [present participle result]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Having been neglected</span> for decades, rural infrastructure is now collapsing, <span class="grammar-highlight">forcing thousands</span> to migrate towards urban centers.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Having been identified</span> as a critical threat, climate change now dominates political discourse, <span class="grammar-highlight">compelling governments</span> to implement radical policy reforms.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Having been marginalized</span> throughout history, minority communities are increasingly asserting their rights, <span class="grammar-highlight">challenging established</span> power structures across society.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Having been exposed</span> to constant digital stimulation, contemporary youth demonstrate shorter attention spans, <span class="grammar-highlight">prompting educators</span> to reconsider traditional teaching methodologies.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Having been undermined</span> by decades of underfunding, public healthcare systems face collapse, <span class="grammar-highlight">leaving vulnerable populations</span> without adequate medical support.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Having been + past participle:</strong><br/>
+• having been neglected / overlooked / dismissed / abandoned / sidelined<br/>
+• having been identified / recognized / exposed / revealed / undermined</p>
+
+<p><strong>Present participle + result:</strong><br/>
+• forcing thousands / compelling governments / challenging established / prompting educators<br/>
+• leaving vulnerable populations / driving innovation / creating unprecedented / transforming entire</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Double Participle Expansion",
+        task: "Study these 5 complete sentences using double participle structures. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Adjective] and [present participle], [subject + verb], [present participle consequence]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Driven by curiosity and seeking significance</span>, many individuals embrace risky innovations, <span class="grammar-highlight">transforming entire</span> cultural landscapes.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Frustrated by bureaucracy and seeking autonomy</span>, entrepreneurs are abandoning traditional employment, <span class="grammar-highlight">creating unprecedented</span> disruption in labor markets.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Alarmed by inequality and demanding justice</span>, protesters have occupied city centers, <span class="grammar-highlight">forcing politicians</span> to acknowledge systemic failures.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Inspired by activism and pursuing reform</span>, young voters are challenging conventional politics, <span class="grammar-highlight">reshaping electoral</span> dynamics across democracies.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Empowered by technology and seeking connection</span>, digital communities are forming rapidly, <span class="grammar-highlight">blurring traditional</span> geographical boundaries.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Opening phrases:</strong><br/>
+• driven by curiosity / frustrated by bureaucracy / alarmed by inequality<br/>
+• inspired by activism / empowered by technology / motivated by principle</p>
+
+<p><strong>Second participles:</strong><br/>
+• seeking significance / seeking autonomy / demanding justice / pursuing reform</p>
+
+<p><strong>Result phrases:</strong><br/>
+• transforming entire / creating unprecedented / forcing politicians / reshaping electoral / blurring traditional</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Gerund Phrases of Consequence",
+        task: "Study these 5 complete sentences using gerund phrases. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Main clause], thereby/thus [gerund phrase expressing consequence]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> The government prioritized economic growth over environmental protection, <span class="grammar-highlight">thereby sacrificing</span> long-term sustainability for short-term gains.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> Digital platforms amplify sensational content algorithmically, <span class="grammar-highlight">thus distorting</span> public discourse and undermining rational debate.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> Educational institutions emphasize standardized testing, <span class="grammar-highlight">thereby neglecting</span> critical thinking skills essential for lifelong learning.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> Corporations externalize environmental costs, <span class="grammar-highlight">thus transferring</span> the burden of pollution onto future generations.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> Modern agriculture relies heavily on chemical fertilizers, <span class="grammar-highlight">thereby degrading</span> soil quality and threatening food security.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Consequence gerunds:</strong><br/>
+• thereby sacrificing / thereby neglecting / thereby undermining / thereby exacerbating<br/>
+• thus distorting / thus transferring / thus creating / thus perpetuating</p>
+
+<p><strong>Common verb patterns:</strong><br/>
+• thereby degrading / reinforcing / obscuring / intensifying / accelerating<br/>
+• thus compromising / jeopardizing / facilitating / legitimizing</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Adjective + Participle Focus",
+        task: "Study these 5 complete sentences with adjective and participle combinations. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Adjective modifier], [subject + verb], [participle phrase]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Unchecked</span>, technological expansion may result in unprecedented ethical dilemmas, <span class="grammar-highlight">challenging our very definition</span> of human identity.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Desperate and disillusioned</span>, young graduates are turning to foreign opportunities, <span class="grammar-highlight">reshaping the national</span> labor market.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Deeply polarized</span>, political debates often deteriorate into hostility, <span class="grammar-highlight">alienating citizens from</span> the democratic process.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Frequently perceived as unjust</span>, immigration policies risk creating mistrust, <span class="grammar-highlight">producing resentment</span> among minority groups.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Overwhelmed by information</span>, modern consumers struggle to make informed decisions, <span class="grammar-highlight">becoming increasingly reliant</span> on algorithmic recommendations.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Opening adjectives:</strong><br/>
+• unchecked / desperate / deeply polarized / frequently perceived<br/>
+• overwhelmed by / confronted with / shaped by / driven by</p>
+
+<p><strong>Result participles:</strong><br/>
+• challenging our definition / reshaping the national / alienating citizens<br/>
+• producing resentment / becoming increasingly / threatening stability</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Participle of Result",
+        task: "Study these 5 complete sentences with result participles. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Main clause], [present participle showing result/consequence]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> Urban overcrowding has escalated beyond control, <span class="grammar-highlight">producing social tensions</span> that threaten the stability of entire communities.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> Climate denial persists among influential politicians, <span class="grammar-highlight">undermining international efforts</span> to combat environmental degradation.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> Social media algorithms prioritize engagement, <span class="grammar-highlight">creating echo chambers</span> that reinforce existing prejudices.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> Automation continues to displace traditional workers, <span class="grammar-highlight">exacerbating unemployment</span> in already vulnerable regions.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> Wealth inequality has reached historic levels, <span class="grammar-highlight">fueling populist movements</span> across democratic nations.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Result participles:</strong><br/>
+• producing social tensions / undermining international efforts / creating echo chambers<br/>
+• exacerbating unemployment / fueling populist movements / threatening stability</p>
+
+<p><strong>Additional patterns:</strong><br/>
+• generating widespread concern / intensifying existing problems<br/>
+• amplifying marginal voices / destabilizing fragile systems</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Complex Adverbial Participles",
+        task: "Study these 5 complete sentences with adverbial participle phrases. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Subject + verb + adverb], [present participle phrase]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> The government acted decisively, <span class="grammar-highlight">implementing emergency measures</span> aimed at reversing years of environmental neglect.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> Universities responded belatedly, <span class="grammar-highlight">introducing diversity programs</span> designed to address systemic discrimination.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> Corporations reacted defensively, <span class="grammar-highlight">launching public relations campaigns</span> intended to deflect criticism of labor practices.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> Healthcare systems adapted rapidly, <span class="grammar-highlight">deploying digital technologies</span> to maintain services during lockdowns.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> Regulators intervened reluctantly, <span class="grammar-highlight">imposing modest restrictions</span> that failed to prevent further market manipulation.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Adverb + action:</strong><br/>
+• acted decisively / responded belatedly / reacted defensively<br/>
+• adapted rapidly / intervened reluctantly / moved swiftly</p>
+
+<p><strong>Participle actions:</strong><br/>
+• implementing emergency measures / introducing diversity programs<br/>
+• launching campaigns / deploying technologies / imposing restrictions</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Balance & Consequence",
+        task: "Study these 5 complete sentences showing balance and consequence. Click to see common UK-style collocations.",
+        text1Title: "Formula: While [concession], [main clause], [participle consequence]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">While global trade remains</span> an engine of growth, it also intensifies competition, <span class="grammar-highlight">pressuring local industries</span> to reduce costs at any price.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">While technology offers</span> unprecedented conveniences, it simultaneously erodes privacy, <span class="grammar-highlight">enabling surveillance</span> on an industrial scale.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">While democracy guarantees</span> fundamental freedoms, it often struggles with efficiency, <span class="grammar-highlight">frustrating citizens</span> who demand immediate solutions.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">While renewable energy promises</span> sustainability, its implementation faces obstacles, <span class="grammar-highlight">delaying the transition</span> from fossil fuels.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">While higher education expands</span> opportunities, it increasingly burdens students, <span class="grammar-highlight">trapping graduates</span> in cycles of debt.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Concession starters:</strong><br/>
+• while global trade remains / while technology offers / while democracy guarantees<br/>
+• while renewable energy promises / while higher education expands</p>
+
+<p><strong>Consequence participles:</strong><br/>
+• pressuring local industries / enabling surveillance / frustrating citizens<br/>
+• delaying the transition / trapping graduates / undermining confidence</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Present Perfect + Participle Result",
+        task: "Study these 5 complete sentences with present perfect and result participles. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Subject + have/has + past participle], [present participle showing ongoing result]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Misinformation has proliferated</span> across social networks, <span class="grammar-highlight">undermining trust</span> in legitimate journalistic sources.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Deforestation has accelerated</span> in tropical regions, <span class="grammar-highlight">destroying biodiversity</span> at unprecedented rates.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Income disparity has widened</span> dramatically, <span class="grammar-highlight">creating resentment</span> between socioeconomic classes.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Digital addiction has emerged</span> as a concern, <span class="grammar-highlight">affecting mental health</span> across demographic groups.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Political polarization has intensified</span> globally, <span class="grammar-highlight">fragmenting societies</span> along ideological lines.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Present perfect patterns:</strong><br/>
+• has proliferated / has accelerated / has widened dramatically<br/>
+• has emerged as / has intensified globally / has deteriorated</p>
+
+<p><strong>Result participles:</strong><br/>
+• undermining trust / destroying biodiversity / creating resentment<br/>
+• affecting mental health / fragmenting societies / eroding confidence</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Passive Voice + Participle",
+        task: "Study these 5 complete sentences with passive constructions and participles. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Subject + be + past participle], [present participle showing result]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Young people are increasingly marginalized</span> in political discourse, <span class="grammar-highlight">losing faith</span> in democratic institutions.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Traditional media are being displaced</span> by digital platforms, <span class="grammar-highlight">struggling to maintain</span> financial viability.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Privacy rights are routinely violated</span> by tech corporations, <span class="grammar-highlight">rendering legal protections</span> increasingly obsolete.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Scientific consensus is frequently ignored</span> by policymakers, <span class="grammar-highlight">jeopardizing efforts</span> to address climate change.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Public services are systematically underfunded</span>, <span class="grammar-highlight">compromising quality</span> and accessibility for vulnerable populations.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Passive constructions:</strong><br/>
+• are increasingly marginalized / are being displaced / are routinely violated<br/>
+• is frequently ignored / are systematically underfunded</p>
+
+<p><strong>Result participles:</strong><br/>
+• losing faith / struggling to maintain / rendering protections obsolete<br/>
+• jeopardizing efforts / compromising quality</p>
+</div>`
+      },
+      {
+        type: "grammar",
+        topic: "Modal + Infinitive + Participle",
+        task: "Study these 5 complete sentences with modal verbs and result participles. Click to see common UK-style collocations.",
+        text1Title: "Formula: [Subject + modal + infinitive], [present participle showing consequence]",
+        text1Content: "",
+        text2Title: "",
+        text2Content: "",
+        answer: `<div class="grammar-sentence">
+<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Failing to regulate social media responsibly can lead</span> to misinformation spreading uncontrollably, <span class="grammar-highlight">destabilizing democratic</span> processes.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Governments must address wealth inequality</span> urgently, <span class="grammar-highlight">preventing social unrest</span> from escalating further.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Education systems should prioritize critical thinking</span>, <span class="grammar-highlight">equipping students</span> to navigate complex information landscapes.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Healthcare providers might adopt telemedicine</span> permanently, <span class="grammar-highlight">transforming patient care</span> delivery models.
+</div>
+
+<div class="grammar-sentence">
+<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Climate policies could incentivize</span> renewable energy adoption, <span class="grammar-highlight">accelerating the transition</span> away from fossil fuels.
+</div>
+
+<div class="collocation-box">
+<h3>Common UK Press Collocations</h3>
+
+<p><strong>Modal constructions:</strong><br/>
+• can lead to / must address / should prioritize / might adopt / could incentivize<br/>
+• may require / will necessitate / must confront / should acknowledge</p>
+
+<p><strong>Result participles:</strong><br/>
+• destabilizing democratic / preventing social unrest / equipping students<br/>
+• transforming patient care / accelerating the transition / encouraging innovation</p>
+</div>`
       }
     ];
 
@@ -554,13 +1001,38 @@
       // Front side
       document.getElementById('topicBadge').textContent = topic.topic;
       document.getElementById('taskBox').textContent = topic.task;
-      document.getElementById('text1Title').textContent = topic.text1Title;
-      document.getElementById('text1Content').textContent = topic.text1Content;
-      document.getElementById('text2Title').textContent = topic.text2Title;
-      document.getElementById('text2Content').textContent = topic.text2Content;
+      
+      // Show/hide text sections based on content
+      const section1 = document.getElementById('textSection1');
+      const section2 = document.getElementById('textSection2');
+      
+      if (topic.text1Title && topic.text1Content) {
+        section1.style.display = 'block';
+        document.getElementById('text1Title').textContent = topic.text1Title;
+        document.getElementById('text1Content').textContent = topic.text1Content;
+      } else {
+        section1.style.display = 'none';
+      }
+      
+      if (topic.text2Title && topic.text2Content) {
+        section2.style.display = 'block';
+        document.getElementById('text2Title').textContent = topic.text2Title;
+        document.getElementById('text2Content').textContent = topic.text2Content;
+      } else {
+        section2.style.display = 'none';
+      }
       
       // Back side
       document.getElementById('topicBadgeBack').textContent = topic.topic;
+      
+      // Update back label based on card type
+      const backLabel = document.getElementById('backLabel');
+      if (topic.type === 'grammar') {
+        backLabel.textContent = 'GRAMMAR EXAMPLES · COLLOCATIONS';
+      } else {
+        backLabel.textContent = 'SAMPLE ANSWER';
+      }
+      
       document.getElementById('essayAnswer').innerHTML = topic.answer;
       
       viewedCards.add(currentIndex);
@@ -619,8 +1091,9 @@
       
       dotsContainer.innerHTML = html;
     }
+
     function resetProgress() {
-      if (confirm('Reset your progress? This will clear all viewed essays.')) {
+      if (confirm('Reset your progress? This will clear all viewed cards.')) {
         currentIndex = 0;
         viewedCards.clear();
         unflipCard();
