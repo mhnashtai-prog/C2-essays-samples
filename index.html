@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,6 +192,7 @@
       font-size: 0.875rem;
       line-height: 1.65;
       color: #d1d1d6;
+      white-space: pre-line;
     }
     
     .essay-answer {
@@ -227,12 +229,6 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-    }
-    
-    .arrows {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
     }
     
     .arrow {
@@ -328,14 +324,23 @@
     }
     
     .grammar-sentence {
-      background: rgba(201, 169, 97, 0.1);
-      border: 1px solid rgba(201, 169, 97, 0.3);
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      margin-bottom: 0.75rem;
+      padding: 0.75rem 0;
+      margin-bottom: 0.5rem;
       font-size: 0.9rem;
       line-height: 1.8;
-      color: #e5e5e7;
+      color: #d1d1d6;
+      border-bottom: 1px solid rgba(84, 84, 88, 0.15);
+    }
+    
+    .grammar-sentence:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    .grammar-number {
+      color: #636366;
+      font-weight: 400;
+      margin-right: 0.5rem;
     }
     
     .grammar-highlight {
@@ -347,24 +352,33 @@
     }
     
     .collocation-box {
-      background: rgba(74, 144, 226, 0.1);
-      border: 1px solid rgba(74, 144, 226, 0.3);
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      margin-top: 1rem;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      margin-top: 1.5rem;
     }
     
     .collocation-box h3 {
-      color: #4A90E2;
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
+      color: #C9A961;
+      margin-bottom: 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     
     .collocation-box p {
-      font-size: 0.8rem;
-      line-height: 1.7;
-      color: #d1d1d6;
-      margin-bottom: 0.6rem;
+      font-size: 0.85rem;
+      line-height: 1.9;
+      color: #b8b8bb;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+    
+    .collocation-box strong {
+      color: #8e8e93;
+      font-weight: 400;
     }
     
     @media (max-width: 768px) {
@@ -412,7 +426,7 @@
       
       .grammar-sentence {
         font-size: 0.85rem;
-        padding: 1rem;
+        padding: 0.75rem 0;
       }
     }
   </style>
@@ -595,39 +609,20 @@
         topic: "Causal Participle Phrases",
         task: "Study these 5 complete sentences using causal participle phrases. Click to see common UK-style collocations.",
         text1Title: "Formula: Having been + past participle, [main clause], [present participle result]",
-        text1Content: "",
+        text1Content: "1. <span class='grammar-highlight'>Having been neglected</span> for decades, rural infrastructure is now collapsing, <span class='grammar-highlight'>forcing</span> thousands to migrate towards urban centers.\n\n2. <span class='grammar-highlight'>Having been identified</span> as a critical threat, climate change now dominates political discourse, <span class='grammar-highlight'>compelling</span> governments to implement radical policy reforms.\n\n3. <span class='grammar-highlight'>Having been marginalized</span> throughout history, minority communities are increasingly asserting their rights, <span class='grammar-highlight'>challenging</span> established power structures across society.\n\n4. <span class='grammar-highlight'>Having been exposed</span> to constant digital stimulation, contemporary youth demonstrate shorter attention spans, <span class='grammar-highlight'>prompting</span> educators to reconsider traditional teaching methodologies.\n\n5. <span class='grammar-highlight'>Having been undermined</span> by decades of underfunding, public healthcare systems face collapse, <span class='grammar-highlight'>leaving</span> vulnerable populations without adequate medical support.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Having been neglected</span> for decades, rural infrastructure is now collapsing, <span class="grammar-highlight">forcing thousands</span> to migrate towards urban centers.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Having been identified</span> as a critical threat, climate change now dominates political discourse, <span class="grammar-highlight">compelling governments</span> to implement radical policy reforms.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Having been marginalized</span> throughout history, minority communities are increasingly asserting their rights, <span class="grammar-highlight">challenging established</span> power structures across society.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Having been exposed</span> to constant digital stimulation, contemporary youth demonstrate shorter attention spans, <span class="grammar-highlight">prompting educators</span> to reconsider traditional teaching methodologies.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Having been undermined</span> by decades of underfunding, public healthcare systems face collapse, <span class="grammar-highlight">leaving vulnerable populations</span> without adequate medical support.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Having been + past participle:</strong><br/>
-• having been neglected / overlooked / dismissed / abandoned / sidelined<br/>
-• having been identified / recognized / exposed / revealed / undermined</p>
+<p>Having been + past participle:<br/>
+having been neglected, overlooked, dismissed, abandoned, sidelined, identified, recognized, exposed, revealed, undermined, marginalized, excluded</p>
 
-<p><strong>Present participle + result:</strong><br/>
-• forcing thousands / compelling governments / challenging established / prompting educators<br/>
-• leaving vulnerable populations / driving innovation / creating unprecedented / transforming entire</p>
+<p>Present participle + result:<br/>
+forcing thousands, compelling governments, challenging established, prompting educators, leaving vulnerable populations, driving innovation, creating unprecedented, transforming entire</p>
+
+<p>Complete verbs list:<br/>
+neglect, identify, marginalize, expose, undermine, force, compel, challenge, prompt, leave, migrate, dominate, implement, assert, demonstrate, reconsider, face, collapse</p>
 </div>`
       },
       {
@@ -635,41 +630,23 @@
         topic: "Double Participle Expansion",
         task: "Study these 5 complete sentences using double participle structures. Click to see common UK-style collocations.",
         text1Title: "Formula: [Adjective] and [present participle], [subject + verb], [present participle consequence]",
-        text1Content: "",
+        text1Content: "1. <span class='grammar-highlight'>Driven by curiosity</span> and <span class='grammar-highlight'>seeking significance</span>, many individuals embrace risky innovations, <span class='grammar-highlight'>transforming</span> entire cultural landscapes.\n\n2. <span class='grammar-highlight'>Frustrated by bureaucracy</span> and <span class='grammar-highlight'>seeking autonomy</span>, entrepreneurs are abandoning traditional employment, <span class='grammar-highlight'>creating</span> unprecedented disruption in labor markets.\n\n3. <span class='grammar-highlight'>Alarmed by inequality</span> and <span class='grammar-highlight'>demanding justice</span>, protesters have occupied city centers, <span class='grammar-highlight'>forcing</span> politicians to acknowledge systemic failures.\n\n4. <span class='grammar-highlight'>Inspired by activism</span> and <span class='grammar-highlight'>pursuing reform</span>, young voters are challenging conventional politics, <span class='grammar-highlight'>reshaping</span> electoral dynamics across democracies.\n\n5. <span class='grammar-highlight'>Empowered by technology</span> and <span class='grammar-highlight'>seeking connection</span>, digital communities are forming rapidly, <span class='grammar-highlight'>blurring</span> traditional geographical boundaries.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Driven by curiosity and seeking significance</span>, many individuals embrace risky innovations, <span class="grammar-highlight">transforming entire</span> cultural landscapes.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Frustrated by bureaucracy and seeking autonomy</span>, entrepreneurs are abandoning traditional employment, <span class="grammar-highlight">creating unprecedented</span> disruption in labor markets.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Alarmed by inequality and demanding justice</span>, protesters have occupied city centers, <span class="grammar-highlight">forcing politicians</span> to acknowledge systemic failures.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Inspired by activism and pursuing reform</span>, young voters are challenging conventional politics, <span class="grammar-highlight">reshaping electoral</span> dynamics across democracies.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Empowered by technology and seeking connection</span>, digital communities are forming rapidly, <span class="grammar-highlight">blurring traditional</span> geographical boundaries.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Opening phrases:</strong><br/>
-• driven by curiosity / frustrated by bureaucracy / alarmed by inequality<br/>
-• inspired by activism / empowered by technology / motivated by principle</p>
+<p>Opening phrases:<br/>
+driven by curiosity, frustrated by bureaucracy, alarmed by inequality, inspired by activism, empowered by technology, motivated by principle, concerned by developments</p>
 
-<p><strong>Second participles:</strong><br/>
-• seeking significance / seeking autonomy / demanding justice / pursuing reform</p>
+<p>Second participles:<br/>
+seeking significance, seeking autonomy, demanding justice, pursuing reform, seeking connection, challenging assumptions, advocating change</p>
 
-<p><strong>Result phrases:</strong><br/>
-• transforming entire / creating unprecedented / forcing politicians / reshaping electoral / blurring traditional</p>
+<p>Result phrases:<br/>
+transforming entire, creating unprecedented, forcing politicians, reshaping electoral, blurring traditional, undermining conventional, disrupting established</p>
+
+<p>Complete verbs list:<br/>
+drive, frustrate, alarm, inspire, empower, seek, demand, pursue, embrace, abandon, occupy, challenge, form, transform, create, force, reshape, blur, acknowledge, disrupt</p>
 </div>`
       },
       {
@@ -677,39 +654,20 @@
         topic: "Gerund Phrases of Consequence",
         task: "Study these 5 complete sentences using gerund phrases. Click to see common UK-style collocations.",
         text1Title: "Formula: [Main clause], thereby/thus [gerund phrase expressing consequence]",
-        text1Content: "",
+        text1Content: "1. The government prioritized economic growth over environmental protection, <span class='grammar-highlight'>thereby sacrificing</span> long-term sustainability for short-term gains.\n\n2. Digital platforms amplify sensational content algorithmically, <span class='grammar-highlight'>thus distorting</span> public discourse and undermining rational debate.\n\n3. Educational institutions emphasize standardized testing, <span class='grammar-highlight'>thereby neglecting</span> critical thinking skills essential for lifelong learning.\n\n4. Corporations externalize environmental costs, <span class='grammar-highlight'>thus transferring</span> the burden of pollution onto future generations.\n\n5. Modern agriculture relies heavily on chemical fertilizers, <span class='grammar-highlight'>thereby degrading</span> soil quality and threatening food security.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> The government prioritized economic growth over environmental protection, <span class="grammar-highlight">thereby sacrificing</span> long-term sustainability for short-term gains.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> Digital platforms amplify sensational content algorithmically, <span class="grammar-highlight">thus distorting</span> public discourse and undermining rational debate.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> Educational institutions emphasize standardized testing, <span class="grammar-highlight">thereby neglecting</span> critical thinking skills essential for lifelong learning.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> Corporations externalize environmental costs, <span class="grammar-highlight">thus transferring</span> the burden of pollution onto future generations.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> Modern agriculture relies heavily on chemical fertilizers, <span class="grammar-highlight">thereby degrading</span> soil quality and threatening food security.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Consequence gerunds:</strong><br/>
-• thereby sacrificing / thereby neglecting / thereby undermining / thereby exacerbating<br/>
-• thus distorting / thus transferring / thus creating / thus perpetuating</p>
+<p>Consequence gerunds:<br/>
+thereby sacrificing, thereby neglecting, thereby undermining, thereby exacerbating, thereby reinforcing, thus distorting, thus transferring, thus creating, thus perpetuating, thus compromising</p>
 
-<p><strong>Common verb patterns:</strong><br/>
-• thereby degrading / reinforcing / obscuring / intensifying / accelerating<br/>
-• thus compromising / jeopardizing / facilitating / legitimizing</p>
+<p>Common verb patterns:<br/>
+thereby degrading, reinforcing, obscuring, intensifying, accelerating, facilitating, thus compromising, jeopardizing, facilitating, legitimizing, enabling</p>
+
+<p>Complete verbs list:<br/>
+prioritize, sacrifice, amplify, distort, undermine, emphasize, neglect, externalize, transfer, rely, degrade, threaten, protect, debate, test, pollute, fertilize</p>
 </div>`
       },
       {
@@ -717,39 +675,20 @@
         topic: "Adjective + Participle Focus",
         task: "Study these 5 complete sentences with adjective and participle combinations. Click to see common UK-style collocations.",
         text1Title: "Formula: [Adjective modifier], [subject + verb], [participle phrase]",
-        text1Content: "",
+        text1Content: "1. <span class='grammar-highlight'>Unchecked</span>, technological expansion may result in unprecedented ethical dilemmas, <span class='grammar-highlight'>challenging</span> our very definition of human identity.\n\n2. <span class='grammar-highlight'>Desperate and disillusioned</span>, young graduates are turning to foreign opportunities, <span class='grammar-highlight'>reshaping</span> the national labor market.\n\n3. <span class='grammar-highlight'>Deeply polarized</span>, political debates often deteriorate into hostility, <span class='grammar-highlight'>alienating</span> citizens from the democratic process.\n\n4. <span class='grammar-highlight'>Frequently perceived as unjust</span>, immigration policies risk creating mistrust, <span class='grammar-highlight'>producing</span> resentment among minority groups.\n\n5. <span class='grammar-highlight'>Overwhelmed by information</span>, modern consumers struggle to make informed decisions, <span class='grammar-highlight'>becoming</span> increasingly reliant on algorithmic recommendations.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Unchecked</span>, technological expansion may result in unprecedented ethical dilemmas, <span class="grammar-highlight">challenging our very definition</span> of human identity.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Desperate and disillusioned</span>, young graduates are turning to foreign opportunities, <span class="grammar-highlight">reshaping the national</span> labor market.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Deeply polarized</span>, political debates often deteriorate into hostility, <span class="grammar-highlight">alienating citizens from</span> the democratic process.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Frequently perceived as unjust</span>, immigration policies risk creating mistrust, <span class="grammar-highlight">producing resentment</span> among minority groups.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Overwhelmed by information</span>, modern consumers struggle to make informed decisions, <span class="grammar-highlight">becoming increasingly reliant</span> on algorithmic recommendations.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Opening adjectives:</strong><br/>
-• unchecked / desperate / deeply polarized / frequently perceived<br/>
-• overwhelmed by / confronted with / shaped by / driven by</p>
+<p>Opening adjectives:<br/>
+unchecked, desperate, deeply polarized, frequently perceived, overwhelmed by, confronted with, shaped by, driven by, increasingly marginalized</p>
 
-<p><strong>Result participles:</strong><br/>
-• challenging our definition / reshaping the national / alienating citizens<br/>
-• producing resentment / becoming increasingly / threatening stability</p>
+<p>Result participles:<br/>
+challenging our definition, reshaping the national, alienating citizens, producing resentment, becoming increasingly, threatening stability, undermining confidence, eroding trust</p>
+
+<p>Complete verbs list:<br/>
+check, expand, challenge, define, graduate, turn, reshape, polarize, debate, deteriorate, alienate, perceive, immigrate, risk, create, produce, resent, overwhelm, inform, struggle, decide, rely, recommend</p>
 </div>`
       },
       {
@@ -757,39 +696,20 @@
         topic: "Participle of Result",
         task: "Study these 5 complete sentences with result participles. Click to see common UK-style collocations.",
         text1Title: "Formula: [Main clause], [present participle showing result/consequence]",
-        text1Content: "",
+        text1Content: "1. Urban overcrowding has escalated beyond control, <span class='grammar-highlight'>producing</span> social tensions that threaten the stability of entire communities.\n\n2. Climate denial persists among influential politicians, <span class='grammar-highlight'>undermining</span> international efforts to combat environmental degradation.\n\n3. Social media algorithms prioritize engagement, <span class='grammar-highlight'>creating</span> echo chambers that reinforce existing prejudices.\n\n4. Automation continues to displace traditional workers, <span class='grammar-highlight'>exacerbating</span> unemployment in already vulnerable regions.\n\n5. Wealth inequality has reached historic levels, <span class='grammar-highlight'>fueling</span> populist movements across democratic nations.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> Urban overcrowding has escalated beyond control, <span class="grammar-highlight">producing social tensions</span> that threaten the stability of entire communities.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> Climate denial persists among influential politicians, <span class="grammar-highlight">undermining international efforts</span> to combat environmental degradation.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> Social media algorithms prioritize engagement, <span class="grammar-highlight">creating echo chambers</span> that reinforce existing prejudices.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> Automation continues to displace traditional workers, <span class="grammar-highlight">exacerbating unemployment</span> in already vulnerable regions.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> Wealth inequality has reached historic levels, <span class="grammar-highlight">fueling populist movements</span> across democratic nations.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Result participles:</strong><br/>
-• producing social tensions / undermining international efforts / creating echo chambers<br/>
-• exacerbating unemployment / fueling populist movements / threatening stability</p>
+<p>Result participles:<br/>
+producing social tensions, undermining international efforts, creating echo chambers, exacerbating unemployment, fueling populist movements, threatening stability, generating widespread concern</p>
 
-<p><strong>Additional patterns:</strong><br/>
-• generating widespread concern / intensifying existing problems<br/>
-• amplifying marginal voices / destabilizing fragile systems</p>
+<p>Additional patterns:<br/>
+intensifying existing problems, amplifying marginal voices, destabilizing fragile systems, eroding public confidence, compromising democratic processes</p>
+
+<p>Complete verbs list:<br/>
+crowd, escalate, control, produce, threaten, stabilize, deny, persist, undermine, combat, degrade, prioritize, engage, create, reinforce, prejudice, automate, displace, exacerbate, employ, reach, fuel, populate, democratize</p>
 </div>`
       },
       {
@@ -797,39 +717,20 @@
         topic: "Complex Adverbial Participles",
         task: "Study these 5 complete sentences with adverbial participle phrases. Click to see common UK-style collocations.",
         text1Title: "Formula: [Subject + verb + adverb], [present participle phrase]",
-        text1Content: "",
+        text1Content: "1. The government <span class='grammar-highlight'>acted decisively</span>, <span class='grammar-highlight'>implementing</span> emergency measures aimed at reversing years of environmental neglect.\n\n2. Universities <span class='grammar-highlight'>responded belatedly</span>, <span class='grammar-highlight'>introducing</span> diversity programs designed to address systemic discrimination.\n\n3. Corporations <span class='grammar-highlight'>reacted defensively</span>, <span class='grammar-highlight'>launching</span> public relations campaigns intended to deflect criticism of labor practices.\n\n4. Healthcare systems <span class='grammar-highlight'>adapted rapidly</span>, <span class='grammar-highlight'>deploying</span> digital technologies to maintain services during lockdowns.\n\n5. Regulators <span class='grammar-highlight'>intervened reluctantly</span>, <span class='grammar-highlight'>imposing</span> modest restrictions that failed to prevent further market manipulation.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> The government acted decisively, <span class="grammar-highlight">implementing emergency measures</span> aimed at reversing years of environmental neglect.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> Universities responded belatedly, <span class="grammar-highlight">introducing diversity programs</span> designed to address systemic discrimination.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> Corporations reacted defensively, <span class="grammar-highlight">launching public relations campaigns</span> intended to deflect criticism of labor practices.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> Healthcare systems adapted rapidly, <span class="grammar-highlight">deploying digital technologies</span> to maintain services during lockdowns.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> Regulators intervened reluctantly, <span class="grammar-highlight">imposing modest restrictions</span> that failed to prevent further market manipulation.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Adverb + action:</strong><br/>
-• acted decisively / responded belatedly / reacted defensively<br/>
-• adapted rapidly / intervened reluctantly / moved swiftly</p>
+<p>Adverb + action:<br/>
+acted decisively, responded belatedly, reacted defensively, adapted rapidly, intervened reluctantly, moved swiftly, proceeded cautiously, withdrew gradually</p>
 
-<p><strong>Participle actions:</strong><br/>
-• implementing emergency measures / introducing diversity programs<br/>
-• launching campaigns / deploying technologies / imposing restrictions</p>
+<p>Participle actions:<br/>
+implementing emergency measures, introducing diversity programs, launching public relations campaigns, deploying digital technologies, imposing modest restrictions, addressing systemic issues</p>
+
+<p>Complete verbs list:<br/>
+govern, act, decide, implement, measure, aim, reverse, neglect, respond, introduce, diversify, program, design, address, discriminate, react, defend, launch, relate, campaign, intend, deflect, criticize, practice, adapt, deploy, digitize, maintain, serve, lock, regulate, intervene, impose, restrict, fail, prevent, manipulate, market</p>
 </div>`
       },
       {
@@ -837,39 +738,20 @@
         topic: "Balance & Consequence",
         task: "Study these 5 complete sentences showing balance and consequence. Click to see common UK-style collocations.",
         text1Title: "Formula: While [concession], [main clause], [participle consequence]",
-        text1Content: "",
+        text1Content: "1. While global trade remains an engine of growth, it also intensifies competition, pressuring local industries to reduce costs at any price.\n\n2. While technology offers unprecedented conveniences, it simultaneously erodes privacy, enabling surveillance on an industrial scale.\n\n3. While democracy guarantees fundamental freedoms, it often struggles with efficiency, frustrating citizens who demand immediate solutions.\n\n4. While renewable energy promises sustainability, its implementation faces obstacles, delaying the transition from fossil fuels.\n\n5. While higher education expands opportunities, it increasingly burdens students, trapping graduates in cycles of debt.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">While global trade remains</span> an engine of growth, it also intensifies competition, <span class="grammar-highlight">pressuring local industries</span> to reduce costs at any price.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">While technology offers</span> unprecedented conveniences, it simultaneously erodes privacy, <span class="grammar-highlight">enabling surveillance</span> on an industrial scale.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">While democracy guarantees</span> fundamental freedoms, it often struggles with efficiency, <span class="grammar-highlight">frustrating citizens</span> who demand immediate solutions.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">While renewable energy promises</span> sustainability, its implementation faces obstacles, <span class="grammar-highlight">delaying the transition</span> from fossil fuels.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">While higher education expands</span> opportunities, it increasingly burdens students, <span class="grammar-highlight">trapping graduates</span> in cycles of debt.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Concession starters:</strong><br/>
-• while global trade remains / while technology offers / while democracy guarantees<br/>
-• while renewable energy promises / while higher education expands</p>
+<p>Concession starters:<br/>
+while global trade remains, while technology offers, while democracy guarantees, while renewable energy promises, while higher education expands, while innovation drives, while capitalism generates</p>
 
-<p><strong>Consequence participles:</strong><br/>
-• pressuring local industries / enabling surveillance / frustrating citizens<br/>
-• delaying the transition / trapping graduates / undermining confidence</p>
+<p>Consequence participles:<br/>
+pressuring local industries, enabling surveillance, frustrating citizens, delaying the transition, trapping graduates, undermining confidence, exacerbating inequalities</p>
+
+<p>Complete verbs list:<br/>
+trade, remain, grow, intensify, compete, pressure, reduce, cost, offer, convenience, erode, enable, surveil, scale, guarantee, free, struggle, frustrate, demand, solve, renew, energize, promise, sustain, implement, face, obstruct, delay, transition, fuel, educate, expand, opportunity, burden, trap, graduate, cycle, debt</p>
 </div>`
       },
       {
@@ -877,39 +759,20 @@
         topic: "Present Perfect + Participle Result",
         task: "Study these 5 complete sentences with present perfect and result participles. Click to see common UK-style collocations.",
         text1Title: "Formula: [Subject + have/has + past participle], [present participle showing ongoing result]",
-        text1Content: "",
+        text1Content: "1. Misinformation has proliferated across social networks, undermining trust in legitimate journalistic sources.\n\n2. Deforestation has accelerated in tropical regions, destroying biodiversity at unprecedented rates.\n\n3. Income disparity has widened dramatically, creating resentment between socioeconomic classes.\n\n4. Digital addiction has emerged as a concern, affecting mental health across demographic groups.\n\n5. Political polarization has intensified globally, fragmenting societies along ideological lines.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Misinformation has proliferated</span> across social networks, <span class="grammar-highlight">undermining trust</span> in legitimate journalistic sources.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Deforestation has accelerated</span> in tropical regions, <span class="grammar-highlight">destroying biodiversity</span> at unprecedented rates.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Income disparity has widened</span> dramatically, <span class="grammar-highlight">creating resentment</span> between socioeconomic classes.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Digital addiction has emerged</span> as a concern, <span class="grammar-highlight">affecting mental health</span> across demographic groups.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Political polarization has intensified</span> globally, <span class="grammar-highlight">fragmenting societies</span> along ideological lines.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Present perfect patterns:</strong><br/>
-• has proliferated / has accelerated / has widened dramatically<br/>
-• has emerged as / has intensified globally / has deteriorated</p>
+<p>Present perfect patterns:<br/>
+has proliferated, has accelerated, has widened dramatically, has emerged as, has intensified globally, has deteriorated, has transformed, has undermined</p>
 
-<p><strong>Result participles:</strong><br/>
-• undermining trust / destroying biodiversity / creating resentment<br/>
-• affecting mental health / fragmenting societies / eroding confidence</p>
+<p>Result participles:<br/>
+undermining trust, destroying biodiversity, creating resentment, affecting mental health, fragmenting societies, eroding confidence, challenging assumptions, destabilizing institutions</p>
+
+<p>Complete verbs list:<br/>
+misinform, proliferate, network, undermine, trust, legitimize, journal, source, deforest, accelerate, destroy, diversify, rate, disparity, widen, create, resent, economize, class, digitize, addict, emerge, concern, affect, health, group, polarize, intensify, fragment, society, ideologize, line</p>
 </div>`
       },
       {
@@ -917,39 +780,20 @@
         topic: "Passive Voice + Participle",
         task: "Study these 5 complete sentences with passive constructions and participles. Click to see common UK-style collocations.",
         text1Title: "Formula: [Subject + be + past participle], [present participle showing result]",
-        text1Content: "",
+        text1Content: "1. Young people are increasingly marginalized in political discourse, losing faith in democratic institutions.\n\n2. Traditional media are being displaced by digital platforms, struggling to maintain financial viability.\n\n3. Privacy rights are routinely violated by tech corporations, rendering legal protections increasingly obsolete.\n\n4. Scientific consensus is frequently ignored by policymakers, jeopardizing efforts to address climate change.\n\n5. Public services are systematically underfunded, compromising quality and accessibility for vulnerable populations.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Young people are increasingly marginalized</span> in political discourse, <span class="grammar-highlight">losing faith</span> in democratic institutions.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Traditional media are being displaced</span> by digital platforms, <span class="grammar-highlight">struggling to maintain</span> financial viability.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Privacy rights are routinely violated</span> by tech corporations, <span class="grammar-highlight">rendering legal protections</span> increasingly obsolete.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Scientific consensus is frequently ignored</span> by policymakers, <span class="grammar-highlight">jeopardizing efforts</span> to address climate change.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Public services are systematically underfunded</span>, <span class="grammar-highlight">compromising quality</span> and accessibility for vulnerable populations.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Passive constructions:</strong><br/>
-• are increasingly marginalized / are being displaced / are routinely violated<br/>
-• is frequently ignored / are systematically underfunded</p>
+<p>Passive constructions:<br/>
+are increasingly marginalized, are being displaced, are routinely violated, is frequently ignored, are systematically underfunded, are gradually eroded, are consistently overlooked</p>
 
-<p><strong>Result participles:</strong><br/>
-• losing faith / struggling to maintain / rendering protections obsolete<br/>
-• jeopardizing efforts / compromising quality</p>
+<p>Result participles:<br/>
+losing faith, struggling to maintain, rendering protections obsolete, jeopardizing efforts, compromising quality, undermining credibility, threatening viability</p>
+
+<p>Complete verbs list:<br/>
+marginalize, discourse, lose, faith, institutionalize, media, displace, platform, struggle, maintain, finance, viable, private, violate, corporatize, render, legal, protect, obsolete, science, consensus, ignore, policy, make, jeopardize, effort, address, climate, change, public, serve, fund, compromise, quality, access, vulnerable, populate</p>
 </div>`
       },
       {
@@ -957,39 +801,20 @@
         topic: "Modal + Infinitive + Participle",
         task: "Study these 5 complete sentences with modal verbs and result participles. Click to see common UK-style collocations.",
         text1Title: "Formula: [Subject + modal + infinitive], [present participle showing consequence]",
-        text1Content: "",
+        text1Content: "1. Failing to regulate social media responsibly can lead to misinformation spreading uncontrollably, destabilizing democratic processes.\n\n2. Governments must address wealth inequality urgently, preventing social unrest from escalating further.\n\n3. Education systems should prioritize critical thinking, equipping students to navigate complex information landscapes.\n\n4. Healthcare providers might adopt telemedicine permanently, transforming patient care delivery models.\n\n5. Climate policies could incentivize renewable energy adoption, accelerating the transition away from fossil fuels.",
         text2Title: "",
         text2Content: "",
-        answer: `<div class="grammar-sentence">
-<strong style="color: #C9A961;">1.</strong> <span class="grammar-highlight">Failing to regulate social media responsibly can lead</span> to misinformation spreading uncontrollably, <span class="grammar-highlight">destabilizing democratic</span> processes.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">2.</strong> <span class="grammar-highlight">Governments must address wealth inequality</span> urgently, <span class="grammar-highlight">preventing social unrest</span> from escalating further.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">3.</strong> <span class="grammar-highlight">Education systems should prioritize critical thinking</span>, <span class="grammar-highlight">equipping students</span> to navigate complex information landscapes.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">4.</strong> <span class="grammar-highlight">Healthcare providers might adopt telemedicine</span> permanently, <span class="grammar-highlight">transforming patient care</span> delivery models.
-</div>
-
-<div class="grammar-sentence">
-<strong style="color: #C9A961;">5.</strong> <span class="grammar-highlight">Climate policies could incentivize</span> renewable energy adoption, <span class="grammar-highlight">accelerating the transition</span> away from fossil fuels.
-</div>
-
-<div class="collocation-box">
+        answer: `<div class="collocation-box">
 <h3>Common UK Press Collocations</h3>
 
-<p><strong>Modal constructions:</strong><br/>
-• can lead to / must address / should prioritize / might adopt / could incentivize<br/>
-• may require / will necessitate / must confront / should acknowledge</p>
+<p>Modal constructions:<br/>
+can lead to, must address, should prioritize, might adopt, could incentivize, may require, will necessitate, must confront, should acknowledge, could facilitate</p>
 
-<p><strong>Result participles:</strong><br/>
-• destabilizing democratic / preventing social unrest / equipping students<br/>
-• transforming patient care / accelerating the transition / encouraging innovation</p>
+<p>Result participles:<br/>
+destabilizing democratic, preventing social unrest, equipping students, transforming patient care, accelerating the transition, encouraging innovation, undermining stability</p>
+
+<p>Complete verbs list:<br/>
+fail, regulate, social, media, respond, lead, misinform, spread, control, destabilize, democratize, process, govern, address, wealth, equal, prevent, unrest, escalate, educate, system, prioritize, critical, think, equip, student, navigate, complex, inform, landscape, health, care, provide, adopt, telemedicine, permanent, transform, patient, deliver, model, climate, policy, incentivize, renew, energy, adopt, accelerate, transition, fuel</p>
 </div>`
       }
     ];
@@ -1031,7 +856,7 @@
       // Update back label based on card type
       const backLabel = document.getElementById('backLabel');
       if (topic.type === 'grammar') {
-        backLabel.textContent = 'GRAMMAR EXAMPLES · COLLOCATIONS';
+        backLabel.textContent = 'COLLOCATIONS & VERBS';
       } else {
         backLabel.textContent = 'SAMPLE ANSWER';
       }
