@@ -380,54 +380,55 @@
       font-weight: 400;
     }
     
-    @media (max-width: 768px) {
-      body {
-        padding: 0.5rem;
-      }
-      
-      header h1 {
-        font-size: 1.5rem;
-      }
-      
-      .subtitle {
-        font-size: 0.7rem;
-      }
-      
-      .author {
-        font-size: 0.6rem;
-      }
-      
-      .card-container {
-        padding: 1rem;
-      }
-      
-      .essay-answer {
-        font-size: 0.85rem;
-      }
-      
-      .text-content {
-        font-size: 0.8rem;
-      }
-      
-      .arrow {
-        width: 3rem;
-        height: 3rem;
-      }
-      
-      .nav-dots {
-        gap: 0.4rem;
-      }
-      
-      .dot {
-        width: 10px;
-        height: 10px;
-      }
-      
-      .grammar-sentence {
-        font-size: 0.85rem;
-        padding: 0.75rem 0;
-      }
-    }
+  @media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .author {
+    font-size: 0.6rem;
+  }
+  
+  .card-container {
+    padding: 1rem;
+    height: calc(100vh - 220px); /* ADD THIS LINE - gives more room */
+  }
+  
+  .essay-answer {
+    font-size: 0.85rem;
+  }
+  
+  .text-content {
+    font-size: 0.8rem;
+  }
+  
+  .arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .nav-dots {
+    gap: 0.4rem;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .grammar-sentence {
+    font-size: 0.85rem;
+    padding: 0.75rem 0;
+  }
+}
   </style>
 </head>
 <body>
