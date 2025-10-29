@@ -124,14 +124,15 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
-  scroll-behavior: smooth; /* ADD THIS */
-}
-
-.scrollable-content {
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(201, 169, 97, 0.4) rgba(28, 28, 30, 0.3);
 }
-    
+
+.scrollable-content::-webkit-scrollbar { 
+  width: 8px; 
+}
+
 .scrollable-content::-webkit-scrollbar-track { 
   background: rgba(28, 28, 30, 0.3);
   border-radius: 4px;
@@ -388,13 +389,10 @@
       color: #8e8e93;
       font-weight: 400;
     }
-    
 @media (max-width: 768px) {
-  .card-container {
-    padding: 1rem;
-    height: calc(100vh - 220px); /* ADD THIS LINE */
+  body {
+    padding: 0.5rem;
   }
-}
   
   header h1 {
     font-size: 1.5rem;
@@ -410,7 +408,7 @@
   
   .card-container {
     padding: 1rem;
-    height: calc(100vh - 220px); /* ADD THIS LINE - gives more room */
+    height: calc(100vh - 220px);
   }
   
   .essay-answer {
@@ -440,6 +438,7 @@
     padding: 0.75rem 0;
   }
 }
+    
   </style>
 </head>
 <body>
