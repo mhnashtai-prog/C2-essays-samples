@@ -387,10 +387,12 @@
       font-weight: 400;
     }
     
-  @media (max-width: 768px) {
-  body {
-    padding: 0.5rem;
+@media (max-width: 768px) {
+  .card-container {
+    padding: 1rem;
+    height: calc(100vh - 220px); /* ADD THIS LINE */
   }
+}
   
   header h1 {
     font-size: 1.5rem;
