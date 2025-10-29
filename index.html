@@ -87,7 +87,8 @@
       padding: 1.5rem;
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
       height: calc(100vh - 180px);
-      overflow: hidden;
+      /* FIXED: Changed from overflow: hidden to visible to prevent double scrollbars */
+      overflow: visible;
     }
     
     .card {
@@ -97,6 +98,12 @@
       transform-style: preserve-3d;
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
+      /* FIXED: Allow child elements to handle their own pointer events */
+      pointer-events: none;
+    }
+    
+    .card > * {
+      pointer-events: auto;
     }
     
     .card.flipped {
@@ -112,15 +119,25 @@
       background: transparent;
       border: none;
       border-radius: 1.5rem;
-      padding: 0;
+      padding: 0 1rem 0 0.5rem; /* FIXED: Added horizontal padding, more space on right for scrollbar */
       display: flex;
       flex-direction: column;
       box-shadow: none;
-      overflow-y: auto;
+      overflow-y: scroll; /* FIXED: Changed from auto to scroll to always show scrollbar */
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      scroll-behavior: smooth;
+      /* CRITICAL FIX: Contain all content within boundaries */
+      max-width: 100%;
+      box-sizing: border-box;
+      contain: layout style paint;
     }
     
+    /* Desktop scrollbar styles */
     .card-face::-webkit-scrollbar { 
       width: 8px; 
+      display: block; /* FIXED: Ensure scrollbar is visible */
     }
     
     .card-face::-webkit-scrollbar-track { 
@@ -138,12 +155,37 @@
       background: rgba(201, 169, 97, 0.6); 
     }
     
+    /* FIXED: Force scrollbar visibility on mobile */
+    @supports (-webkit-touch-callout: none) {
+      .card-face {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    
     .card-front {
       z-index: 2;
+      pointer-events: auto;
     }
     
     .card-back {
       transform: rotateY(180deg);
+      /* CRITICAL FIX: Ensure back side respects container width */
+      max-width: 100%;
+      box-sizing: border-box;
+      z-index: 1;
+      pointer-events: none; /* Disabled when not visible */
+    }
+    
+    /* CRITICAL FIX: When card is flipped, back should be interactive */
+    .card.flipped .card-front {
+      z-index: 1;
+      pointer-events: none; /* Disable interaction with front when flipped */
+    }
+    
+    .card.flipped .card-back {
+      z-index: 2;
+      pointer-events: auto; /* Enable interaction with back when flipped */
     }
     
     .card-label {
@@ -177,6 +219,7 @@
     
     .text-section:last-of-type {
       border-bottom: none;
+      padding-bottom: 6rem; /* FIXED: Extra padding at bottom for space before hint */
     }
     
     .text-title {
@@ -192,6 +235,11 @@
       line-height: 1.65;
       color: #d1d1d6;
       white-space: pre-line;
+      /* CRITICAL FIX: Prevent horizontal overflow that breaks vertical scroll */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      max-width: 100%;
     }
     
     .essay-answer {
@@ -199,15 +247,29 @@
       line-height: 1.8;
       color: #e5e5e7;
       text-align: justify;
+      padding-bottom: 6rem; /* FIXED: Large bottom padding to ensure scrollability and space for hint */
+      /* CRITICAL FIX: Prevent horizontal overflow that breaks vertical scroll */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      max-width: 100%;
+      flex-grow: 1; /* Allow it to grow */
     }
     
     .essay-answer p {
       margin-bottom: 1.25rem;
+      /* CRITICAL FIX: Prevent text overflow */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
     
     .essay-answer strong {
       color: #4A90E2;
       font-weight: 600;
+      /* CRITICAL FIX: Prevent span overflow */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
     .card-hint {
@@ -219,6 +281,13 @@
       border-radius: 0.75rem;
       border: 1px solid rgba(201, 169, 97, 0.2);
       text-align: center;
+      /* FIXED: Make hint non-interactive to prevent click conflicts */
+      pointer-events: none;
+      flex-shrink: 0; /* Prevent shrinking */
+      position: sticky;
+      bottom: 0;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
     }
     
     .controls {
@@ -329,6 +398,10 @@
       line-height: 1.8;
       color: #d1d1d6;
       border-bottom: 1px solid rgba(84, 84, 88, 0.15);
+      /* CRITICAL FIX: Prevent text overflow */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
     
     .grammar-sentence:last-of-type {
@@ -345,6 +418,9 @@
     .grammar-highlight {
       color: #4A90E2;
       font-weight: 400;
+      /* CRITICAL FIX: Prevent span overflow */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
     .collocation-box {
@@ -370,6 +446,10 @@
       color: #b8b8bb;
       margin-bottom: 0.75rem;
       font-weight: 400;
+      /* CRITICAL FIX: Prevent text overflow */
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
     
     .collocation-box strong {
@@ -438,7 +518,7 @@
     </header>
     
     <div class="card-container">
-      <div class="card" id="card" onclick="flipCard()">
+      <div class="card" id="card">
         <div class="card-face card-front">
           <div class="card-label">ESSAY TASK</div>
           <div class="topic-badge" id="topicBadge"></div>
@@ -818,6 +898,10 @@ fail, regulate, social, media, respond, lead, misinform, spread, control, destab
     let currentIndex = 0;
     let viewedCards = new Set();
     let isFlipped = false;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+    let isScrolling = false;
+    let lastTouchY = 0;
 
     function render() {
       const topic = essayTopics[currentIndex];
@@ -864,6 +948,8 @@ fail, regulate, social, media, respond, lead, misinform, spread, control, destab
     }
 
     function flipCard() {
+      if (isScrolling) return; // Don't flip if user was scrolling
+      
       const card = document.getElementById('card');
       isFlipped = !isFlipped;
       if (isFlipped) {
@@ -937,6 +1023,62 @@ fail, regulate, social, media, respond, lead, misinform, spread, control, destab
       } else if (e.key === 'r' || e.key === 'R') {
         resetProgress();
       }
+    });
+
+    // IMPROVED touch event handlers for better mobile scrolling
+    const card = document.getElementById('card');
+    const cardFront = document.querySelector('.card-front');
+    const cardBack = document.querySelector('.card-back');
+    
+    // Click event for desktop
+    cardFront.addEventListener('click', (e) => {
+      // Only flip on click if not on a touch device or if it's a mouse click
+      if (!('ontouchstart' in window)) {
+        flipCard();
+      }
+    });
+    
+    cardBack.addEventListener('click', (e) => {
+      // Only flip on click if not on a touch device or if it's a mouse click
+      if (!('ontouchstart' in window)) {
+        flipCard();
+      }
+    });
+    
+    // Attach touch handlers to both card faces
+    [cardFront, cardBack].forEach(face => {
+      face.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        lastTouchY = touchStartY;
+        touchStartTime = Date.now();
+        isScrolling = false;
+      }, { passive: true });
+
+      face.addEventListener('touchmove', (e) => {
+        const touchMoveY = e.touches[0].clientY;
+        const deltaY = Math.abs(touchMoveY - lastTouchY);
+        
+        // If moved more than 5px vertically, consider it scrolling
+        if (deltaY > 5) {
+          isScrolling = true;
+        }
+        lastTouchY = touchMoveY;
+      }, { passive: true });
+
+      face.addEventListener('touchend', (e) => {
+        const touchDuration = Date.now() - touchStartTime;
+        const totalDelta = Math.abs(lastTouchY - touchStartY);
+        
+        // If it was a quick tap (less than 200ms) and minimal movement (less than 10px), flip the card
+        if (touchDuration < 200 && totalDelta < 10 && !isScrolling) {
+          flipCard();
+        }
+        
+        // Reset after a short delay
+        setTimeout(() => {
+          isScrolling = false;
+        }, 100);
+      }, { passive: true });
     });
 
     // Initialize
