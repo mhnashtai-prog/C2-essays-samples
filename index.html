@@ -102,51 +102,41 @@
     .card.flipped {
       transform: rotateY(180deg);
     }
+    
     .card-face {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  background: transparent;
-  border: none;
-  border-radius: 1.5rem;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: none;
-  overflow: hidden;
-}
-
-.scrollable-content {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(201, 169, 97, 0.4) rgba(28, 28, 30, 0.3);
-}
-
-.scrollable-content::-webkit-scrollbar { 
-  width: 8px; 
-}
-
-.scrollable-content::-webkit-scrollbar-track { 
-  background: rgba(28, 28, 30, 0.3);
-  border-radius: 4px;
-}
-
-.scrollable-content::-webkit-scrollbar-thumb {
-  background: rgba(201, 169, 97, 0.4);
-  border-radius: 4px;
-  transition: background 0.2s ease;
-}
-
-.scrollable-content::-webkit-scrollbar-thumb:hover { 
-  background: rgba(201, 169, 97, 0.6); 
-}
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background: transparent;
+      border: none;
+      border-radius: 1.5rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      box-shadow: none;
+      overflow-y: auto;
+    }
+    
+    .card-face::-webkit-scrollbar { 
+      width: 8px; 
+    }
+    
+    .card-face::-webkit-scrollbar-track { 
+      background: rgba(28, 28, 30, 0.3);
+      border-radius: 4px;
+    }
+    
+    .card-face::-webkit-scrollbar-thumb {
+      background: rgba(201, 169, 97, 0.4);
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+    
+    .card-face::-webkit-scrollbar-thumb:hover { 
+      background: rgba(201, 169, 97, 0.6); 
+    }
     
     .card-front {
       z-index: 2;
@@ -207,7 +197,7 @@
     .essay-answer {
       font-size: 0.9rem;
       line-height: 1.8;
-      color:#d1d1d6;
+      color: #e5e5e7;
       text-align: justify;
     }
     
@@ -216,8 +206,8 @@
     }
     
     .essay-answer strong {
-      color: #87CEEB;
-      font-weight: 400;
+      color: #4A90E2;
+      font-weight: 600;
     }
     
     .card-hint {
@@ -353,11 +343,8 @@
     }
     
     .grammar-highlight {
-      color: #1a1a1a;
-      background: rgba(74, 144, 226, 0.35);
-      padding: 0.15rem 0.35rem;
-      border-radius: 0.25rem;
-      font-weight: 500;
+      color: #4A90E2;
+      font-weight: 400;
     }
     
     .collocation-box {
@@ -389,56 +376,55 @@
       color: #8e8e93;
       font-weight: 400;
     }
-@media (max-width: 768px) {
-  body {
-    padding: 0.5rem;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  .subtitle {
-    font-size: 0.7rem;
-  }
-  
-  .author {
-    font-size: 0.6rem;
-  }
-  
-  .card-container {
-    padding: 1rem;
-    height: calc(100vh - 220px);
-  }
-  
-  .essay-answer {
-    font-size: 0.85rem;
-  }
-  
-  .text-content {
-    font-size: 0.8rem;
-  }
-  
-  .arrow {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  .nav-dots {
-    gap: 0.4rem;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .grammar-sentence {
-    font-size: 0.85rem;
-    padding: 0.75rem 0;
-  }
-}
     
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5rem;
+      }
+      
+      header h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.7rem;
+      }
+      
+      .author {
+        font-size: 0.6rem;
+      }
+      
+      .card-container {
+        padding: 1rem;
+      }
+      
+      .essay-answer {
+        font-size: 0.85rem;
+      }
+      
+      .text-content {
+        font-size: 0.8rem;
+      }
+      
+      .arrow {
+        width: 3rem;
+        height: 3rem;
+      }
+      
+      .nav-dots {
+        gap: 0.4rem;
+      }
+      
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+      
+      .grammar-sentence {
+        font-size: 0.85rem;
+        padding: 0.75rem 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -472,17 +458,17 @@
           <div class="card-hint">💡 Click card to see answer</div>
         </div>
         
-       <div class="card-face card-back">
-  <div class="card-label" id="backLabel">SAMPLE ANSWER</div>
-  <div class="topic-badge" id="topicBadgeBack"></div>
-  
-  <div class="scrollable-content">
-    <div class="essay-answer" id="essayAnswer"></div>
-  </div>
-         
-  <div class="card-hint">💡 Click to see question again</div>
-</div>
-        
+        <div class="card-face card-back">
+          <div class="card-label" id="backLabel">SAMPLE ANSWER</div>
+          <div class="topic-badge" id="topicBadgeBack"></div>
+          
+          <div class="essay-answer" id="essayAnswer"></div>
+          
+          <div class="card-hint">💡 Click to see question again</div>
+        </div>
+      </div>
+    </div>
+    
     <div class="controls">
       <div class="arrow" onclick="prevCard(); event.stopPropagation();">←</div>
       <div class="nav-dots" id="navDots"></div>
@@ -619,7 +605,7 @@
         topic: "Causal Participle Phrases",
         task: "Study these 5 complete sentences using causal participle phrases. Click to see common UK-style collocations.",
         text1Title: "Formula: Having been + past participle, [main clause], [present participle result]",
-        text1Content: "1. Having been neglected for decades, rural infrastructure is now collapsing, forcing thousands to migrate towards urban centers.\n\n2. Having been identified as a critical threat, climate change now dominates political discourse, compelling governments to implement radical policy reforms.\n\n3. Having been marginalized throughout history, minority communities are increasingly asserting their rights, challenging established power structures across society.\n\n4. Having been exposed to constant digital stimulation, contemporary youth demonstrate shorter attention spans, prompting educators to reconsider traditional teaching methodologies.\n\n5. Having been undermined by decades of underfunding, public healthcare systems face collapse, leaving vulnerable populations without adequate medical support.",
+        text1Content: "1. <span class='grammar-highlight'>Having been neglected</span> for decades, rural infrastructure is now collapsing, <span class='grammar-highlight'>forcing</span> thousands to migrate towards urban centers.\n\n2. <span class='grammar-highlight'>Having been identified</span> as a critical threat, climate change now dominates political discourse, <span class='grammar-highlight'>compelling</span> governments to implement radical policy reforms.\n\n3. <span class='grammar-highlight'>Having been marginalized</span> throughout history, minority communities are increasingly asserting their rights, <span class='grammar-highlight'>challenging</span> established power structures across society.\n\n4. <span class='grammar-highlight'>Having been exposed</span> to constant digital stimulation, contemporary youth demonstrate shorter attention spans, <span class='grammar-highlight'>prompting</span> educators to reconsider traditional teaching methodologies.\n\n5. <span class='grammar-highlight'>Having been undermined</span> by decades of underfunding, public healthcare systems face collapse, <span class='grammar-highlight'>leaving</span> vulnerable populations without adequate medical support.",
         text2Title: "",
         text2Content: "",
         answer: `<div class="collocation-box">
@@ -640,7 +626,7 @@ neglect, identify, marginalize, expose, undermine, force, compel, challenge, pro
         topic: "Double Participle Expansion",
         task: "Study these 5 complete sentences using double participle structures. Click to see common UK-style collocations.",
         text1Title: "Formula: [Adjective] and [present participle], [subject + verb], [present participle consequence]",
-        text1Content: "1. Driven by curiosity and seeking significance, many individuals embrace risky innovations, transforming entire cultural landscapes.\n\n2. Frustrated by bureaucracy and seeking autonomy, entrepreneurs are abandoning traditional employment, creating unprecedented disruption in labor markets.\n\n3. Alarmed by inequality and demanding justice, protesters have occupied city centers, forcing politicians to acknowledge systemic failures.\n\n4. Inspired by activism and pursuing reform, young voters are challenging conventional politics, reshaping electoral dynamics across democracies.\n\n5. Empowered by technology and seeking connection, digital communities are forming rapidly, blurring traditional geographical boundaries.",
+        text1Content: "1. <span class='grammar-highlight'>Driven by curiosity</span> and <span class='grammar-highlight'>seeking significance</span>, many individuals embrace risky innovations, <span class='grammar-highlight'>transforming</span> entire cultural landscapes.\n\n2. <span class='grammar-highlight'>Frustrated by bureaucracy</span> and <span class='grammar-highlight'>seeking autonomy</span>, entrepreneurs are abandoning traditional employment, <span class='grammar-highlight'>creating</span> unprecedented disruption in labor markets.\n\n3. <span class='grammar-highlight'>Alarmed by inequality</span> and <span class='grammar-highlight'>demanding justice</span>, protesters have occupied city centers, <span class='grammar-highlight'>forcing</span> politicians to acknowledge systemic failures.\n\n4. <span class='grammar-highlight'>Inspired by activism</span> and <span class='grammar-highlight'>pursuing reform</span>, young voters are challenging conventional politics, <span class='grammar-highlight'>reshaping</span> electoral dynamics across democracies.\n\n5. <span class='grammar-highlight'>Empowered by technology</span> and <span class='grammar-highlight'>seeking connection</span>, digital communities are forming rapidly, <span class='grammar-highlight'>blurring</span> traditional geographical boundaries.",
         text2Title: "",
         text2Content: "",
         answer: `<div class="collocation-box">
@@ -664,7 +650,7 @@ drive, frustrate, alarm, inspire, empower, seek, demand, pursue, embrace, abando
         topic: "Gerund Phrases of Consequence",
         task: "Study these 5 complete sentences using gerund phrases. Click to see common UK-style collocations.",
         text1Title: "Formula: [Main clause], thereby/thus [gerund phrase expressing consequence]",
-        text1Content: "1. The government prioritized economic growth over environmental protection, thereby sacrificing long-term sustainability for short-term gains.\n\n2. Digital platforms amplify sensational content algorithmically, thus distorting public discourse and undermining rational debate.\n\n3. Educational institutions emphasize standardized testing, thereby neglecting critical thinking skills essential for lifelong learning.\n\n4. Corporations externalize environmental costs, thus transferring the burden of pollution onto future generations.\n\n5. Modern agriculture relies heavily on chemical fertilizers, thereby degrading soil quality and threatening food security.",
+        text1Content: "1. The government prioritized economic growth over environmental protection, <span class='grammar-highlight'>thereby sacrificing</span> long-term sustainability for short-term gains.\n\n2. Digital platforms amplify sensational content algorithmically, <span class='grammar-highlight'>thus distorting</span> public discourse and undermining rational debate.\n\n3. Educational institutions emphasize standardized testing, <span class='grammar-highlight'>thereby neglecting</span> critical thinking skills essential for lifelong learning.\n\n4. Corporations externalize environmental costs, <span class='grammar-highlight'>thus transferring</span> the burden of pollution onto future generations.\n\n5. Modern agriculture relies heavily on chemical fertilizers, <span class='grammar-highlight'>thereby degrading</span> soil quality and threatening food security.",
         text2Title: "",
         text2Content: "",
         answer: `<div class="collocation-box">
@@ -685,7 +671,7 @@ prioritize, sacrifice, amplify, distort, undermine, emphasize, neglect, external
         topic: "Adjective + Participle Focus",
         task: "Study these 5 complete sentences with adjective and participle combinations. Click to see common UK-style collocations.",
         text1Title: "Formula: [Adjective modifier], [subject + verb], [participle phrase]",
-        text1Content: "1. Unchecked, technological expansion may result in unprecedented ethical dilemmas, challenging our very definition of human identity.\n\n2. Desperate and disillusioned, young graduates are turning to foreign opportunities, reshaping the national labor market.\n\n3. Deeply polarized, political debates often deteriorate into hostility, alienating citizens from the democratic process.\n\n4. Frequently perceived as unjust, immigration policies risk creating mistrust, producing resentment among minority groups.\n\n5. Overwhelmed by information, modern consumers struggle to make informed decisions, becoming increasingly reliant on algorithmic recommendations.",
+        text1Content: "1. <span class='grammar-highlight'>Unchecked</span>, technological expansion may result in unprecedented ethical dilemmas, <span class='grammar-highlight'>challenging</span> our very definition of human identity.\n\n2. <span class='grammar-highlight'>Desperate and disillusioned</span>, young graduates are turning to foreign opportunities, <span class='grammar-highlight'>reshaping</span> the national labor market.\n\n3. <span class='grammar-highlight'>Deeply polarized</span>, political debates often deteriorate into hostility, <span class='grammar-highlight'>alienating</span> citizens from the democratic process.\n\n4. <span class='grammar-highlight'>Frequently perceived as unjust</span>, immigration policies risk creating mistrust, <span class='grammar-highlight'>producing</span> resentment among minority groups.\n\n5. <span class='grammar-highlight'>Overwhelmed by information</span>, modern consumers struggle to make informed decisions, <span class='grammar-highlight'>becoming</span> increasingly reliant on algorithmic recommendations.",
         text2Title: "",
         text2Content: "",
         answer: `<div class="collocation-box">
@@ -706,7 +692,7 @@ check, expand, challenge, define, graduate, turn, reshape, polarize, debate, det
         topic: "Participle of Result",
         task: "Study these 5 complete sentences with result participles. Click to see common UK-style collocations.",
         text1Title: "Formula: [Main clause], [present participle showing result/consequence]",
-        text1Content: "1. Urban overcrowding has escalated beyond control, producing social tensions that threaten the stability of entire communities.\n\n2. Climate denial persists among influential politicians, undermining international efforts to combat environmental degradation.\n\n3. Social media algorithms prioritize engagement, creating echo chambers that reinforce existing prejudices.\n\n4. Automation continues to displace traditional workers, exacerbating unemployment in already vulnerable regions.\n\n5. Wealth inequality has reached historic levels, fueling populist movements across democratic nations.",
+        text1Content: "1. Urban overcrowding has escalated beyond control, <span class='grammar-highlight'>producing</span> social tensions that threaten the stability of entire communities.\n\n2. Climate denial persists among influential politicians, <span class='grammar-highlight'>undermining</span> international efforts to combat environmental degradation.\n\n3. Social media algorithms prioritize engagement, <span class='grammar-highlight'>creating</span> echo chambers that reinforce existing prejudices.\n\n4. Automation continues to displace traditional workers, <span class='grammar-highlight'>exacerbating</span> unemployment in already vulnerable regions.\n\n5. Wealth inequality has reached historic levels, <span class='grammar-highlight'>fueling</span> populist movements across democratic nations.",
         text2Title: "",
         text2Content: "",
         answer: `<div class="collocation-box">
@@ -727,7 +713,7 @@ crowd, escalate, control, produce, threaten, stabilize, deny, persist, undermine
         topic: "Complex Adverbial Participles",
         task: "Study these 5 complete sentences with adverbial participle phrases. Click to see common UK-style collocations.",
         text1Title: "Formula: [Subject + verb + adverb], [present participle phrase]",
-        text1Content: "1. The government acted decisively, implementing emergency measures aimed at reversing years of environmental neglect.\n\n2. Universities responded belatedly, introducing diversity programs designed to address systemic discrimination.\n\n3. Corporations reacted defensively, launching public relations campaigns intended to deflect criticism of labor practices.\n\n4. Healthcare systems adapted rapidly, deploying digital technologies to maintain services during lockdowns.\n\n5. Regulators intervened reluctantly, imposing modest restrictions that failed to prevent further market manipulation.",
+        text1Content: "1. The government <span class='grammar-highlight'>acted decisively</span>, <span class='grammar-highlight'>implementing</span> emergency measures aimed at reversing years of environmental neglect.\n\n2. Universities <span class='grammar-highlight'>responded belatedly</span>, <span class='grammar-highlight'>introducing</span> diversity programs designed to address systemic discrimination.\n\n3. Corporations <span class='grammar-highlight'>reacted defensively</span>, <span class='grammar-highlight'>launching</span> public relations campaigns intended to deflect criticism of labor practices.\n\n4. Healthcare systems <span class='grammar-highlight'>adapted rapidly</span>, <span class='grammar-highlight'>deploying</span> digital technologies to maintain services during lockdowns.\n\n5. Regulators <span class='grammar-highlight'>intervened reluctantly</span>, <span class='grammar-highlight'>imposing</span> modest restrictions that failed to prevent further market manipulation.",
         text2Title: "",
         text2Content: "",
         answer: `<div class="collocation-box">
